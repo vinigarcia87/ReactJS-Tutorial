@@ -1,3 +1,4 @@
+import P from 'prop-types';
 import React from "react";
 
 import './styles.scss';
@@ -11,3 +12,11 @@ export const PostCard = ({post}) => (
         </div>
     </div>
 );
+
+PostCard.propTypes = {
+  post: P.shape({
+      title: P.string.isRequired,
+      cover: P.string.isRequired,
+      body: P.string.isRequired
+  })
+};
